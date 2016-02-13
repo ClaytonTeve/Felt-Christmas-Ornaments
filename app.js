@@ -7,14 +7,74 @@ var mainThreadColor = $('.mainThreadColor').val('background-color');
 var secondaryThreadColor = $('.secondaryThreadColor').val('background-color');
 var accentThreadColor = $('.accentThreadColor').val('background-color');
 
+$('.order-button h1').text('Pick your six colors.')
+	$('.order-button').fadeTo(2000, .25).css('background-color', '#888888');
 
 
+$(document).ready(function(){
+	$(document).click(function(){
+		if (mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length > 90) {
+			$('.order-button h1').text('Order your custom bird!');
+			$('.order-button').fadeTo(800, 1).css('background-color', 'blue');
+		};
+	});
+});
+
+
+///////////////////////////////////////////////////////
 //Make arrays of colors for the felt and thread colors. 
+///////////////////////////////////////////////////////
 
-var feltColors = ['#ff0000', '#00ff00', '#0000ff', '#fff000','#ffffff']
-var threadColors = ['#000', '#000', '#000']
+var feltColors = [
+'#4f2682', //Purple
+'#027248', //Teal
+'#008b5a', //Sea Green
+'#8abe40', //Light Green
+'#23398e', //Dark Blue
+'#018ca9', //Light Blue
+'#4aa943', //Green
+'#fde102', //Yellow
+'#f19120', //Light Orange
+'#ea5924', //Orange
+'#c72748', //Red
+'#e50771', //Pink
+'#edbab9', //Light Pink
+'#ce9e7a', //Tan
+'#f0dac2', //Light Tan
+'#3a2426', //Dark Brown
+'#262223', //Black
+'#9ea3a9', //Grey
+'#ffffff', //White
+'#3e476c' //Blue Grey
 
-
+]
+var threadColors = [
+'#05356E', //Flat Blue
+'#092AB5', //Blue
+'#0CDDE8', //Light Blue 
+'#0DB4FF', //Cyan Blue
+'#00FFC4', //Teal
+'#0CE877', //Sea Green
+'#336E05', //Dark Green
+'#009E21', //True Green
+'#0DFF3E', //Bright Green
+'#8AFF0D', //Yellow Green
+'#FFEF00', //Bright Yellow
+'#CF9B0A', //Golden Yellow
+'#E86A0C', //Pumpkin
+'#FF4800', //Dark Orange
+'#E82A0C', //Red Orange
+'#CF0A10', //Deep Red
+'#E5007A', //Pinkish Purple
+'#9C009E', //True Purple
+'#33056E', //Dark Purple
+'#ffffff', //White
+'#000000', //Black
+'#888888', //Grey
+'#444444', //Light Grey
+'#ce9e7a', //Tan
+'#f0dac2' //Light Tan
+]
 
 //this function add the colors to the color-picker boxes
 function propColors ( list , location ) {
@@ -32,8 +92,13 @@ $(document).ready(propColors(feltColors,".bird-body ul"));
 //Adds the thread colors used for the birds body to the document.
 $(document).ready(propColors(threadColors, ".thread ul"))
 
+
+
+
+////////////////////////////////////////////////////////////
 //Changes which color is selected on each part of the bird
 //by adding the selected class to the list item clicked.
+////////////////////////////////////////////////////////////
 
 //Main Body Color
 $(".main-body-select li").click(function(){

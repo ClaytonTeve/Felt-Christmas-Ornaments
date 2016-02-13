@@ -9,6 +9,7 @@ LAYOUT
 	width: 100%;
 	float: left;
 	margin-bottom: -100px;
+	margin-top: -50px;
 }
 
 #turtle-dove svg {
@@ -34,6 +35,23 @@ LAYOUT
 .colorboxes {
 	width: 100%;
 	margin: auto;
+}
+
+.order-button {
+	display: none;
+	z-index: 9999;
+	position: absolute;
+	right: 100px;
+	top: 300px;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	font-size: .85em;
+	background-color: #0094FF;
+	color: white;
+	border-radius: 10px;
+	border: 3px solid #0C52E8;
+
 }
 
 /******************************
