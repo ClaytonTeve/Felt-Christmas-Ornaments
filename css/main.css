@@ -8,8 +8,8 @@ LAYOUT
 	display: block;
 	width: 100%;
 	float: left;
-	margin-bottom: -100px;
-	margin-top: -50px;
+	margin-bottom: -130px;
+	margin-top: -30px;
 }
 
 #turtle-dove svg {
@@ -38,11 +38,11 @@ LAYOUT
 }
 
 .order-button {
-	display: none;
-	z-index: 9999;
+	display: block;
+	z-index: 10;
 	position: absolute;
 	right: 100px;
-	top: 300px;
+	bottom: 200px;
 	width: 200px;
 	height: 100px;
 	text-align: center;
@@ -60,6 +60,7 @@ COLOR SELECTION
 
 
 .selected {
+	margin: 0px;
 	border: 3px solid #111;
 }
 
@@ -73,7 +74,7 @@ ul {
 li {
   	display: inline-block;
   	padding:15px;
-  	margin: 2px;
+  	margin: 3px;
   	border: 1px solid #777;
   	color:#000;
   	text-decoration:none;
@@ -99,6 +100,7 @@ li {
 	.color-picker {
 		width: 47%;
 	}
+
 }
 
 @media screen and (max-width: 480px) {
@@ -109,8 +111,16 @@ li {
 		padding: 10px;
 	}
 	#turtle-dove {
-		margin: -130px 0 -180px 0;
+		margin: -130px 0 -120px 0;
 	}
+
+
+	.order-button {
+		display: none;
+		left: none;
+		right: 8%;
+		width: 85%;
+		height: 70px;
 }
 
 
