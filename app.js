@@ -9,26 +9,18 @@ var accentThreadColor = $('.accentThreadColor').val('background-color');
 
 
 
-if ($(window).width() >= 479){
 $(document).ready(function(){
 	$('.order-button h1').text('Pick your six colors.')
+if ($(window).width() >= 479){
 	$('.order-button').css('display', 'block');
 	$('.order-button').animate({ opacity: 0 }, 0);
 	$('.order-button').animate({ opacity: .35, bottom: "+380px" }, 2000);
-	$(document).click(function(){
-		console.log(mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length);
-		if (mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length > 90) {
-			$('.order-button h1').text('Order your custom bird!');
-			$('.order-button').fadeTo(1200, 1);
-		};
-	});
-});
 } else { 
-	$(document).ready(function(){
-	$('.order-button h1').text('Pick your six colors.')
 	$('.order-button').css('display', 'block');
 	$('.order-button').animate({ opacity: 0 }, 0);
 	$('.order-button').animate({ opacity: .35, top: "+250px" }, 2000);
+
+};
 	$(document).click(function(){
 		console.log(mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length);
 		if (mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length > 90) {
@@ -37,7 +29,6 @@ $(document).ready(function(){
 		};
 	});
 });
-};
 
 
 ///////////////////////////////////////////////////////
