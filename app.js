@@ -7,15 +7,20 @@ var mainThreadColor = $('.mainThreadColor').val('background-color');
 var secondaryThreadColor = $('.secondaryThreadColor').val('background-color');
 var accentThreadColor = $('.accentThreadColor').val('background-color');
 
-$('.order-button h1').text('Pick your six colors.')
-	$('.order-button').fadeTo(2000, .25).css('background-color', '#888888');
 
 
 $(document).ready(function(){
+	$('.order-button h1').text('Pick your six colors.')
+	$('.order-button').css('display', 'inline');
+	$('.order-button').animate({ opacity: 0 }, 0);
+	$('.order-button').animate({ opacity: .35, bottom: "+120px" }, 2000);
+
+};
 	$(document).click(function(){
+		console.log(mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length);
 		if (mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length > 90) {
 			$('.order-button h1').text('Order your custom bird!');
-			$('.order-button').fadeTo(800, 1).css('background-color', 'blue');
+			$('.order-button').fadeTo(1200, 1);
 		};
 	});
 });
@@ -66,10 +71,9 @@ var threadColors = [
 '#E82A0C', //Red Orange
 '#CF0A10', //Deep Red
 '#E5007A', //Pinkish Purple
-'#9C009E', //True Purple
 '#33056E', //Dark Purple
 '#ffffff', //White
-'#000000', //Black
+'#212121', //Black
 '#888888', //Grey
 '#444444', //Light Grey
 '#ce9e7a', //Tan

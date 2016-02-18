@@ -9,12 +9,13 @@ LAYOUT
 	width: 100%;
 	float: left;
 	margin-bottom: -100px;
-	margin-top: -50px;
+	margin-top: -30px;
 }
 
 #turtle-dove svg {
 	width: 100%;
 	margin: auto;
+	margin-bottom: -130px;
 }
 
 #wrapper {
@@ -25,7 +26,7 @@ LAYOUT
 .color-picker {
 	display: inline-block;
 	min-width: 200px;
-	width: 31%;
+	width: 30%;
 	padding: 0 1% 1%;
 	margin: .75% auto;
 	background-color: #eee;
@@ -39,10 +40,10 @@ LAYOUT
 
 .order-button {
 	display: none;
-	z-index: 9999;
-	position: absolute;
-	right: 100px;
-	top: 300px;
+	z-index: 10;
+	position: relative;
+	float: right;
+	right: 4%;
 	width: 200px;
 	height: 100px;
 	text-align: center;
@@ -51,6 +52,7 @@ LAYOUT
 	color: white;
 	border-radius: 10px;
 	border: 3px solid #0C52E8;
+	clear: both;
 
 }
 
@@ -60,6 +62,7 @@ COLOR SELECTION
 
 
 .selected {
+	margin: 0px;
 	border: 3px solid #111;
 }
 
@@ -73,7 +76,7 @@ ul {
 li {
   	display: inline-block;
   	padding:15px;
-  	margin: 2px;
+  	margin: 3px;
   	border: 1px solid #777;
   	color:#000;
   	text-decoration:none;
@@ -99,19 +102,40 @@ li {
 	.color-picker {
 		width: 47%;
 	}
+
 }
 
 @media screen and (max-width: 480px) {
 	.color-picker {
 		width: 95%;
 	}
+
 	li {
 		padding: 10px;
 	}
 	#turtle-dove {
-		margin: -130px 0 -180px 0;
+		margin: -170px 0 -110px 0;
 	}
+
+	#turtle-dove svg {
+		margin-bottom: -100px;
+	}
+
+
+	.order-button {
+		margin-bottom: 0;
+		margin: 0 auto;
+		right: 15%;
+		width: 70%;
+		font-size: .6em;
+		letter-spacing: 1.7;
+		height: 40px;
 }
+
+	.order-button h1 {
+		padding: 0;
+		margin-top: 3%;
+	}
 
 
 
