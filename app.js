@@ -11,14 +11,9 @@ var accentThreadColor = $('.accentThreadColor').val('background-color');
 
 $(document).ready(function(){
 	$('.order-button h1').text('Pick your six colors.')
-if ($(window).width() >= 479){
-	$('.order-button').css('display', 'block');
+	$('.order-button').css('display', 'inline');
 	$('.order-button').animate({ opacity: 0 }, 0);
-	$('.order-button').animate({ opacity: .35, bottom: "+380px" }, 2000);
-} else { 
-	$('.order-button').css('display', 'block');
-	$('.order-button').animate({ opacity: 0 }, 0);
-	$('.order-button').animate({ opacity: .35, top: "+250px" }, 2000);
+	$('.order-button').animate({ opacity: .35, bottom: "+120px" }, 2000);
 
 };
 	$(document).click(function(){
@@ -76,7 +71,6 @@ var threadColors = [
 '#E82A0C', //Red Orange
 '#CF0A10', //Deep Red
 '#E5007A', //Pinkish Purple
-'#9C009E', //True Purple
 '#33056E', //Dark Purple
 '#ffffff', //White
 '#212121', //Black
