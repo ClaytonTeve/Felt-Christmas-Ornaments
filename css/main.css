@@ -1,3 +1,48 @@
+/******************************
+DIALOG FORM
+*******************************/
+
+
+input[type=text]{
+margin-top: 5px;
+margin-bottom: 20px;
+width: 96%;
+border-radius: 5px;
+border: 1px solid #e0e0e0;
+padding: 5px 0;
+}
+
+#name,#email{
+padding-left: 10px;
+}
+
+input[type=submit]{
+width:30%;
+border: 1px solid #59b4d4;
+background: #0078a3;
+color: #eeeeee;
+padding: 3px 0px;
+border-radius: 5px;
+margin-left: 33%;
+cursor:pointer;
+}
+
+input[type=submit]:hover{
+border: 1px solid #666666 ;
+background: #555555;
+color: white;
+}
+
+.ui-dialog .ui-dialog-content {
+padding: 2em;
+}
+
+
+.box {
+	height: 100px;
+	width: 100px;
+	background-color: grey;
+}
 
 
 /******************************
@@ -26,7 +71,7 @@ LAYOUT
 .color-picker {
 	display: inline-block;
 	min-width: 200px;
-	width: 30%;
+	width: 31%;
 	padding: 0 1% 1%;
 	margin: .75% auto;
 	background-color: #eee;

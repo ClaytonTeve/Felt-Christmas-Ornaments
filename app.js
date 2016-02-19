@@ -10,17 +10,58 @@ var accentThreadColor = $('.accentThreadColor').val('background-color');
 
 
 $(document).ready(function(){
+	//Hides the modal-dialog form when the page loads.
+	$("#dialog").dialog({
+						modal: true,
+						autoOpen: false
+					});
+	//Build up the unselectable order button.
 	$('.order-button h1').text('Pick your six colors.')
 	$('.order-button').css('display', 'inline');
 	$('.order-button').animate({ opacity: 0 }, 0);
 	$('.order-button').animate({ opacity: .35, bottom: "+120px" }, 2000);
-
-};
+	
+	//Activate the order button. It opens the dialog for the user to submit their contact information.
 	$(document).click(function(){
 		console.log(mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length);
 		if (mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length > 90) {
 			$('.order-button h1').text('Order your custom bird!');
 			$('.order-button').fadeTo(1200, 1);
+			
+			//Code to open the dialog form.
+			$(document).ready(function(){
+	
+				$(function() {
+					$(".order-button").on("click", function() {
+						$("#dialog").dialog("open");
+					});
+				});
+
+				//validating Form Fields.....
+				$("#submit").click(function(e){
+
+				var email = $("#email").val();
+				var name = $("#name").val();
+				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+				if( email ==='' || name ==='')
+			       {
+					 alert("Please fill all fields...!!!!!!");
+					 e.preventDefault();
+			       }
+			    else if(!(email).match(emailReg))
+			       {
+			         alert("Invalid Email...!!!!!!");
+					 e.preventDefault();
+			       }    
+				else 
+				   {
+			         alert("Form Submitted Successfully......");
+			         $("#dialog").dialog("close");
+				   }
+				
+				});
+					
+			});
 		};
 	});
 });

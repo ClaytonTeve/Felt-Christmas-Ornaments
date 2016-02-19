@@ -5,12 +5,26 @@
 	<title>Design a Turtle Dove</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<header>
 		</header>
 		<div id="wrapper">
+			<div id="dialog" title="Dialog Form">
+	         <form action="" method="post">
+				<label>Name:</label><br/>
+				<input type="text" id="name" name="name"><br/>
+				
+				<label>Email:</label><br/>
+				<input type="text" id="email" name="email"><br/>
+
+				<input type="submit" id="submit" value="Submit" />
+			  </form>
+			  <div class='box'></div>
+
+		  </div>
 
 <div id="turtle-dove">
 <svg xmlns="http://www.w3.org/2000/svg" width="759" height="586" viewBox="0 0 759 586">
@@ -99,6 +113,7 @@
 	</body>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery-ui.js" type="text/javascript" charset="utf-8"></script>
 </html>
 
 
