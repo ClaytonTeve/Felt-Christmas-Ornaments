@@ -3,23 +3,25 @@ DIALOG FORM
 *******************************/
 
 
+textarea,
 input[type=text]{
 margin-top: 5px;
 margin-bottom: 20px;
 width: 96%;
 border-radius: 5px;
-border: 1px solid #e0e0e0;
+border: 1px solid #a0a0a0;
 padding: 5px 0;
 }
 
-#name,#email{
+#name,#email,#msg{
 padding-left: 10px;
 }
+
 
 input[type=submit]{
 width:30%;
 border: 1px solid #59b4d4;
-background: #0078a3;
+background: #0094FF;
 color: #eeeeee;
 padding: 3px 0px;
 border-radius: 5px;
@@ -29,21 +31,40 @@ cursor:pointer;
 
 input[type=submit]:hover{
 border: 1px solid #666666 ;
-background: #555555;
+background: #0078a3;
 color: white;
+}
+
+.ui-dialog-titlebar {
+	background-color: black;
 }
 
 .ui-dialog .ui-dialog-content {
 padding: 2em;
 }
 
+ #small-turtledove svg {
+ 	margin-top: -40px;
+ 	margin-left: -18px;
+ }
 
-.box {
-	height: 100px;
-	width: 100px;
-	background-color: grey;
+ #small-turtledove {
+ 	width: 280px;
+ 	margin-bottom: -70px;
+ 	margin-left: auto;
+ 	margin-right: auto; 
+ }
+
+h4 {
+	margin-top: 25px;
+	margin-bottom: -10px;
 }
 
+p {
+ 	font-size: 14px;
+ 	line-height: 1.35;
+ 	margin-bottom: 20px;
+ }
 
 /******************************
 LAYOUT
@@ -54,7 +75,7 @@ LAYOUT
 	width: 100%;
 	float: left;
 	margin-bottom: -100px;
-	margin-top: -30px;
+	margin-top: -50px;
 }
 
 #turtle-dove svg {
@@ -83,6 +104,7 @@ LAYOUT
 	margin: auto;
 }
 
+
 .order-button {
 	display: none;
 	z-index: 10;
@@ -98,8 +120,17 @@ LAYOUT
 	border-radius: 10px;
 	border: 3px solid #0C52E8;
 	clear: both;
-
 }
+
+.active-button {
+	cursor: pointer;
+}
+
+.active-button:hover {
+	background-color: #003399;
+	border: 3px solid #0094FF;
+}
+
 
 /******************************
 COLOR SELECTION
@@ -125,6 +156,7 @@ li {
   	border: 1px solid #777;
   	color:#000;
   	text-decoration:none;
+  	cursor: pointer;
 }
 
 

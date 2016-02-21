@@ -13,7 +13,10 @@ $(document).ready(function(){
 	//Hides the modal-dialog form when the page loads.
 	$("#dialog").dialog({
 						modal: true,
-						autoOpen: false
+						autoOpen: false,
+						width: $(window).width() > 450 ? 450 : $(window).width(),
+						maxWidth: 450,
+						title: 'Your Turtle Dove Order'
 					});
 	//Build up the unselectable order button.
 	$('.order-button h1').text('Pick your six colors.')
@@ -27,7 +30,7 @@ $(document).ready(function(){
 		if (mainBodyColor.length + wingsColor.length + innerWingColor.length + mainThreadColor.length + secondaryThreadColor.length + accentThreadColor.length > 90) {
 			$('.order-button h1').text('Order your custom bird!');
 			$('.order-button').fadeTo(1200, 1);
-			
+			$('.order-button').addClass('active-button');
 			//Code to open the dialog form.
 			$(document).ready(function(){
 	
@@ -64,6 +67,15 @@ $(document).ready(function(){
 			});
 		};
 	});
+});
+
+
+$(window).resize(function() {
+        myDialog.dialog( "option", "position", 'center' );
+        if($(window).width() < 450){
+            var width = myDialog.dialog( "option", "width" );
+            myDialog.dialog( "option", "width", $(window).width() );
+	};
 });
 
 
